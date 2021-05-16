@@ -11,6 +11,8 @@
 		FBDFD58B26512086005D90FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFD58A26512086005D90FA /* ContentView.swift */; };
 		FBDFD58D26512088005D90FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBDFD58C26512088005D90FA /* Assets.xcassets */; };
 		FBDFD59026512088005D90FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBDFD58F26512088005D90FA /* Preview Assets.xcassets */; };
+		FBFC59F326516CDB00F3100F /* OnBoardingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC59F226516CDB00F3100F /* OnBoardingCard.swift */; };
+		FBFC59F6265172A300F3100F /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC59F5265172A300F3100F /* OnBoarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		FBDFD58C26512088005D90FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBDFD58F26512088005D90FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FBDFD59126512088005D90FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBFC59F226516CDB00F3100F /* OnBoardingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCard.swift; sourceTree = "<group>"; };
+		FBFC59F5265172A300F3100F /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 		FBDFD58726512086005D90FA /* eatsy */ = {
 			isa = PBXGroup;
 			children = (
+				FBFC59F42651729000F3100F /* Screens */,
+				FBFC59F1265169BD00F3100F /* Views */,
 				FBDFD58826512086005D90FA /* eatsyApp.swift */,
 				FBDFD58A26512086005D90FA /* ContentView.swift */,
 				FBDFD58C26512088005D90FA /* Assets.xcassets */,
@@ -67,6 +73,22 @@
 				FBDFD58F26512088005D90FA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FBFC59F1265169BD00F3100F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FBFC59F226516CDB00F3100F /* OnBoardingCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FBFC59F42651729000F3100F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FBFC59F5265172A300F3100F /* OnBoarding.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBDFD58B26512086005D90FA /* ContentView.swift in Sources */,
+				FBFC59F326516CDB00F3100F /* OnBoardingCard.swift in Sources */,
+				FBFC59F6265172A300F3100F /* OnBoarding.swift in Sources */,
 				FBDFD58926512086005D90FA /* eatsyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
