@@ -18,7 +18,7 @@ struct OnBoardingCard: View {
                 Spacer()
                 Button(action: {}) {
                     HStack{
-                        Text("Start")
+                        Text("Login")
                         Image(systemName: "arrow.right.circle").imageScale(.large)
                     }
                     .padding(.horizontal, 15)
