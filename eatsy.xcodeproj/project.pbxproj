@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB6E229D2652723C00408FB8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E229C2652723C00408FB8 /* Home.swift */; };
+		FB6E229F2652724900408FB8 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E229E2652724900408FB8 /* Search.swift */; };
+		FB6E22A12652725500408FB8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E22A02652725500408FB8 /* Settings.swift */; };
+		FB6E22A32652727300408FB8 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E22A22652727300408FB8 /* Orders.swift */; };
+		FB6E22A52652728800408FB8 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E22A42652728800408FB8 /* Cart.swift */; };
 		FBDFD58926512086005D90FA /* eatsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFD58826512086005D90FA /* eatsyApp.swift */; };
 		FBDFD58B26512086005D90FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFD58A26512086005D90FA /* ContentView.swift */; };
 		FBDFD58D26512088005D90FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBDFD58C26512088005D90FA /* Assets.xcassets */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB6E229C2652723C00408FB8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		FB6E229E2652724900408FB8 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		FB6E22A02652725500408FB8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		FB6E22A22652727300408FB8 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
+		FB6E22A42652728800408FB8 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		FBDFD58526512086005D90FA /* eatsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDFD58826512086005D90FA /* eatsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eatsyApp.swift; sourceTree = "<group>"; };
 		FBDFD58A26512086005D90FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				FBFC59F5265172A300F3100F /* OnBoarding.swift */,
+				FB6E229C2652723C00408FB8 /* Home.swift */,
+				FB6E229E2652724900408FB8 /* Search.swift */,
+				FB6E22A02652725500408FB8 /* Settings.swift */,
+				FB6E22A22652727300408FB8 /* Orders.swift */,
+				FB6E22A42652728800408FB8 /* Cart.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -161,8 +176,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBDFD58B26512086005D90FA /* ContentView.swift in Sources */,
+				FB6E22A52652728800408FB8 /* Cart.swift in Sources */,
 				FBFC59F326516CDB00F3100F /* OnBoardingCard.swift in Sources */,
+				FB6E229D2652723C00408FB8 /* Home.swift in Sources */,
+				FB6E229F2652724900408FB8 /* Search.swift in Sources */,
+				FB6E22A12652725500408FB8 /* Settings.swift in Sources */,
 				FBFC59F6265172A300F3100F /* OnBoarding.swift in Sources */,
+				FB6E22A32652727300408FB8 /* Orders.swift in Sources */,
 				FBDFD58926512086005D90FA /* eatsyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
