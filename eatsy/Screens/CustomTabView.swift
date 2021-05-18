@@ -23,10 +23,9 @@ struct CustomTabView: View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
             TabView(selection: $selectedTab){
                 Home().tag("house")
-                Color.red.tag("magnifyingglass")
-                Color.blue.tag("cart")
-                Color.yellow.tag("filemenu.and.selection")
-                Color.purple.tag("gearshape")
+                Search().tag("magnifyingglass")
+                Orders().tag("filemenu.and.selection")
+                Settings().tag("gearshape")
             }
             
             HStack(){
@@ -83,9 +82,14 @@ struct CustomTabView_Previews: PreviewProvider {
 struct CustomShape: Shape {
     var xAxis: CGFloat
     
-    var animatableData: CGFloat{
-        get {return xAxis}
-        set {xAxis = newValue}
+    var animatableData: CGFloat {
+       get {
+        return xAxis
+       }
+       
+        set {
+            xAxis = newValue
+        }
     }
     
     
