@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct eatsyApp: App {
+    @StateObject private var deviceSettings = DeviceSettings()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(deviceSettings)
         }
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnBoardingCard: View {
+    @EnvironmentObject private var deviceSettings: DeviceSettings
     var imageName:String
     
     var body: some View {
@@ -16,7 +17,9 @@ struct OnBoardingCard: View {
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 Spacer()
-                Button(action: {}) {
+                Button(action: {
+                    deviceSettings.hideOnBoardingScreen = true
+                }) {
                     HStack{
                         Text("Login")
                         Image(systemName: "arrow.right.circle").imageScale(.large)

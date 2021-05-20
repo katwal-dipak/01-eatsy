@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var deviceSettings: DeviceSettings
+    
     var body: some View {
-         CustomTabView()
+        if(deviceSettings.hideOnBoardingScreen){
+            CustomTabView()
+        }else{
+            OnBoarding()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(DeviceSettings())
     }
 }
