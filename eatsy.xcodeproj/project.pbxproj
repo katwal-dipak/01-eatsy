@@ -49,9 +49,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FB3848722654EE4F00DB9189 /* Common */ = {
+		FB250132265644D5006DF6C8 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		FB25013326564541006DF6C8 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FBD312A92653996D002CC084 /* CustomTabView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FB25013426564552006DF6C8 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				FBFC59F5265172A300F3100F /* OnBoarding.swift */,
+				FB6E229C2652723C00408FB8 /* Home.swift */,
+				FB6E229E2652724900408FB8 /* Search.swift */,
+				FB6E22A02652725500408FB8 /* Settings.swift */,
+				FB6E22A22652727300408FB8 /* Orders.swift */,
+				FB6E22A42652728800408FB8 /* Cart.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		FB2501352656455A006DF6C8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FBFC59F226516CDB00F3100F /* OnBoardingCard.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -75,8 +104,7 @@
 		FBDFD58726512086005D90FA /* eatsy */ = {
 			isa = PBXGroup;
 			children = (
-				FB3848722654EE4F00DB9189 /* Common */,
-				FBFC59F42651729000F3100F /* Screens */,
+				FB250132265644D5006DF6C8 /* Stores */,
 				FBFC59F1265169BD00F3100F /* Views */,
 				FBDFD58826512086005D90FA /* eatsyApp.swift */,
 				FBDFD58A26512086005D90FA /* ContentView.swift */,
@@ -98,23 +126,11 @@
 		FBFC59F1265169BD00F3100F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FBFC59F226516CDB00F3100F /* OnBoardingCard.swift */,
+				FB2501352656455A006DF6C8 /* Common */,
+				FB25013426564552006DF6C8 /* Screen */,
+				FB25013326564541006DF6C8 /* Navigation */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FBFC59F42651729000F3100F /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				FBFC59F5265172A300F3100F /* OnBoarding.swift */,
-				FB6E229C2652723C00408FB8 /* Home.swift */,
-				FB6E229E2652724900408FB8 /* Search.swift */,
-				FB6E22A02652725500408FB8 /* Settings.swift */,
-				FB6E22A22652727300408FB8 /* Orders.swift */,
-				FB6E22A42652728800408FB8 /* Cart.swift */,
-				FBD312A92653996D002CC084 /* CustomTabView.swift */,
-			);
-			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
