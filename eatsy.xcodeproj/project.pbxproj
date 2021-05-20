@@ -49,6 +49,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB3848722654EE4F00DB9189 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		FBDFD57C26512086005D90FA = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +75,7 @@
 		FBDFD58726512086005D90FA /* eatsy */ = {
 			isa = PBXGroup;
 			children = (
+				FB3848722654EE4F00DB9189 /* Common */,
 				FBFC59F42651729000F3100F /* Screens */,
 				FBFC59F1265169BD00F3100F /* Views */,
 				FBDFD58826512086005D90FA /* eatsyApp.swift */,
