@@ -13,6 +13,8 @@
 		FB6E22A12652725500408FB8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E22A02652725500408FB8 /* Settings.swift */; };
 		FB6E22A32652727300408FB8 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E22A22652727300408FB8 /* Orders.swift */; };
 		FB6E22A52652728800408FB8 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E22A42652728800408FB8 /* Cart.swift */; };
+		FBA43EA526575CC2003F4D8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA43EA426575CC2003F4D8C /* Constants.swift */; };
+		FBA43EA82657604D003F4D8C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA43EA72657604D003F4D8C /* ColorExtension.swift */; };
 		FBD312AA2653996D002CC084 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD312A92653996D002CC084 /* CustomTabView.swift */; };
 		FBDFD58926512086005D90FA /* eatsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFD58826512086005D90FA /* eatsyApp.swift */; };
 		FBDFD58B26512086005D90FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFD58A26512086005D90FA /* ContentView.swift */; };
@@ -29,6 +31,8 @@
 		FB6E22A02652725500408FB8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FB6E22A22652727300408FB8 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		FB6E22A42652728800408FB8 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		FBA43EA426575CC2003F4D8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FBA43EA72657604D003F4D8C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FBD312A92653996D002CC084 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		FBDFD58526512086005D90FA /* eatsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDFD58826512086005D90FA /* eatsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eatsyApp.swift; sourceTree = "<group>"; };
@@ -88,6 +92,36 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		FB25013826565367006DF6C8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FBA43EA426575CC2003F4D8C /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FB25013D265653F7006DF6C8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FB25013E26565439006DF6C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FBA43EA626576036003F4D8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBA43EA72657604D003F4D8C /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FBDFD57C26512086005D90FA = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +141,10 @@
 		FBDFD58726512086005D90FA /* eatsy */ = {
 			isa = PBXGroup;
 			children = (
+				FBA43EA626576036003F4D8C /* Extensions */,
+				FB25013E26565439006DF6C8 /* Models */,
+				FB25013D265653F7006DF6C8 /* Data */,
+				FB25013826565367006DF6C8 /* Utility */,
 				FB250132265644D5006DF6C8 /* Stores */,
 				FBFC59F1265169BD00F3100F /* Views */,
 				FBDFD58826512086005D90FA /* eatsyApp.swift */,
@@ -212,10 +250,12 @@
 				FB6E229F2652724900408FB8 /* Search.swift in Sources */,
 				FB2501372656463A006DF6C8 /* DeviceSettings.swift in Sources */,
 				FB6E22A12652725500408FB8 /* Settings.swift in Sources */,
+				FBA43EA526575CC2003F4D8C /* Constants.swift in Sources */,
 				FBFC59F6265172A300F3100F /* OnBoarding.swift in Sources */,
 				FBD312AA2653996D002CC084 /* CustomTabView.swift in Sources */,
 				FB6E22A32652727300408FB8 /* Orders.swift in Sources */,
 				FBDFD58926512086005D90FA /* eatsyApp.swift in Sources */,
+				FBA43EA82657604D003F4D8C /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
