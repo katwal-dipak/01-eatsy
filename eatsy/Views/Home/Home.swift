@@ -9,7 +9,12 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+                VStack{
+                    ImageCarsouel()
+                      .frame(width: geometry.size.width, height: geometry.size.width * 0.7)
+                }
+        }
     }
 }
 
