@@ -15,12 +15,21 @@ struct FiltersModalView: View {
     
     var body: some View {
         VStack{
-            Text("This is a modal view")
+            Spacer()
+            .frame(maxWidth:.infinity)
+            .background(Color.black)
+            .opacity(0.3)
+           .background(BackgroundCleanerView())
+            VStack{
+                Text("This is a modal view")
+            }
+            .frame(maxWidth: .infinity, minHeight: 500)
+            .background(Color.Custom.Black.core)
         }
-        .frame(width: 500, height: 1000) .background(Color.black) .opacity(0.3).background(BackgroundCleanerView())
         .onTapGesture {
             presentationMode.wrappedValue.dismiss()
         }
+        .ignoresSafeArea(.all)
         
     }
 }
