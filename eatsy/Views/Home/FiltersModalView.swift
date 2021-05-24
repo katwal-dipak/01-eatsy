@@ -12,6 +12,7 @@ struct BackgroundCleanerView: UIViewRepresentable { func makeUIView(context: Con
 
 struct FiltersModalView: View {
     @Environment(\.presentationMode) var presentationMode
+    var title: String = ""
     
     var body: some View {
         VStack{
@@ -21,10 +22,10 @@ struct FiltersModalView: View {
                 .opacity(0.3)
                 .background(BackgroundCleanerView())
             VStack{
-                Text("This is a modal view")
+                Text(title)
             }
             .frame(maxWidth: .infinity, minHeight: 500)
-            .background(Color.Custom.Black.core)
+            .background(Color.white)
         }
         .onTapGesture {
             presentationMode.wrappedValue.dismiss()

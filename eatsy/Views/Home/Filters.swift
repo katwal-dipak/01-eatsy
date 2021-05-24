@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Filters: View {
     @State private var isPresented:Bool = false
+    @State private var filterType: String = "Dietary"
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
@@ -23,13 +24,13 @@ struct Filters: View {
                 .background(Color.Custom.Concrete.tint25Percent).cornerRadius(25)
                 .foregroundColor(Color.Custom.Black.tint75Percent)
                 
-               FilterButton(title: "Dietary")
-               FilterButton(title: "Price Range")
-               FilterButton(title: "Max. Delivery Fee")
-               FilterButton(title: "Sort")
+                FilterButton(isPresented: $isPresented, filter: $filterType, title: "Dietary")
+                FilterButton(isPresented: $isPresented, filter: $filterType,title: "Price Range")
+                FilterButton(isPresented: $isPresented, filter: $filterType,title: "Max. Delivery Fee")
+                FilterButton(isPresented: $isPresented, filter: $filterType,title: "Sort")
             }
             .fullScreenCover(isPresented: $isPresented){
-                FiltersModalView()
+                FiltersModalView( title: filterType)
             }
             
         }
@@ -39,10 +40,15 @@ struct Filters: View {
 
 
 struct FilterButton: View {
-     var title: String
+    @Binding var isPresented:Bool
+    @Binding var filter:String
+    var title: String
     
     var body: some View {
-        Button(action: {}, label: {
+        Button(action: {
+            self.isPresented = true
+            self.filter = title
+        }, label: {
             HStack(alignment: .center) {
                 Text(("\(title)"))
                 Image(systemName: "chevron.down")
