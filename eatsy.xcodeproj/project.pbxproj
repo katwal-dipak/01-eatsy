@@ -19,6 +19,7 @@
 		FBA43EB526578710003F4D8C /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = FBA43EB426578710003F4D8C /* URLImageStore */; };
 		FBA43EB726578710003F4D8C /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FBA43EB626578710003F4D8C /* URLImage */; };
 		FBA43EB9265789C6003F4D8C /* ImageCarsouel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA43EB8265789C6003F4D8C /* ImageCarsouel.swift */; };
+		FBA43EBB2657B0B0003F4D8C /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA43EBA2657B0B0003F4D8C /* Filters.swift */; };
 		FBD312AA2653996D002CC084 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD312A92653996D002CC084 /* CustomTabView.swift */; };
 		FBDFD58926512086005D90FA /* eatsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFD58826512086005D90FA /* eatsyApp.swift */; };
 		FBDFD58B26512086005D90FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDFD58A26512086005D90FA /* ContentView.swift */; };
@@ -39,6 +40,7 @@
 		FBA43EA72657604D003F4D8C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FBA43EB126578685003F4D8C /* FeaturedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemView.swift; sourceTree = "<group>"; };
 		FBA43EB8265789C6003F4D8C /* ImageCarsouel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarsouel.swift; sourceTree = "<group>"; };
+		FBA43EBA2657B0B0003F4D8C /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		FBD312A92653996D002CC084 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		FBDFD58526512086005D90FA /* eatsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDFD58826512086005D90FA /* eatsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eatsyApp.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				FB6E229C2652723C00408FB8 /* Home.swift */,
 				FBA43EB8265789C6003F4D8C /* ImageCarsouel.swift */,
+				FBA43EBA2657B0B0003F4D8C /* Filters.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBDFD58B26512086005D90FA /* ContentView.swift in Sources */,
+				FBA43EBB2657B0B0003F4D8C /* Filters.swift in Sources */,
 				FB6E22A52652728800408FB8 /* Cart.swift in Sources */,
 				FBFC59F326516CDB00F3100F /* OnBoardingCard.swift in Sources */,
 				FB6E229D2652723C00408FB8 /* Home.swift in Sources */,

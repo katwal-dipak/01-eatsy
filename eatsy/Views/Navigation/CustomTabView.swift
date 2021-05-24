@@ -64,7 +64,7 @@ struct CustomTabView: View {
             }
             .padding(.horizontal, 30)
             .padding(.vertical)
-            .background(Color.Black.tint75Percent.clipShape(CustomShape(xAxis: xAxis)).cornerRadius(12))
+            .background(Color.Custom.Black.tint75Percent.clipShape(CustomShape(xAxis: xAxis)).cornerRadius(12))
             .padding(.horizontal)
             .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
             

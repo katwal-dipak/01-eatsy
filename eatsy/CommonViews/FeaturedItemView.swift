@@ -37,7 +37,7 @@ struct FeaturedItemView: View {
                 
             }
             .frame(width: geometry.size.width, height: geometry.size.width * 0.6)
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/).cornerRadius(5)
+            .cornerRadius(5)
         }
     }
 }

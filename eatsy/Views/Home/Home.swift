@@ -9,8 +9,13 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        VStack{
-            ImageCarsouel()
+        NavigationView{
+            VStack{
+                Filters().padding(.horizontal, 10)
+                Divider()
+                ImageCarsouel()
+            }
+            .navigationBarHidden(true)
         }
     }
 }
