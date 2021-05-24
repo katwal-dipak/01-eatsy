@@ -16,10 +16,10 @@ struct FiltersModalView: View {
     var body: some View {
         VStack{
             Spacer()
-            .frame(maxWidth:.infinity)
-            .background(Color.black)
-            .opacity(0.3)
-           .background(BackgroundCleanerView())
+                .frame(maxWidth:.infinity)
+                .background(Color.black)
+                .opacity(0.3)
+                .background(BackgroundCleanerView())
             VStack{
                 Text("This is a modal view")
             }
