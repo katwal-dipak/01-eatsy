@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct Filters: View {
+    @State private var isPresented:Bool = false
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    self.isPresented = true
+                }, label: {
                     Image(systemName: "slider.horizontal.3")
                 })
                 .padding(.horizontal, 15)
@@ -23,6 +27,9 @@ struct Filters: View {
                FilterButton(title: "Price Range")
                FilterButton(title: "Max. Delivery Fee")
                FilterButton(title: "Sort")
+            }
+            .fullScreenCover(isPresented: $isPresented){
+                FiltersModalView()
             }
             
         }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB2501372656463A006DF6C8 /* DeviceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2501362656463A006DF6C8 /* DeviceSettings.swift */; };
+		FB536CF9265BE92800E04111 /* FiltersModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB536CF8265BE92800E04111 /* FiltersModalView.swift */; };
 		FB6E229D2652723C00408FB8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E229C2652723C00408FB8 /* Home.swift */; };
 		FB6E229F2652724900408FB8 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E229E2652724900408FB8 /* Search.swift */; };
 		FB6E22A12652725500408FB8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E22A02652725500408FB8 /* Settings.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		FB2501362656463A006DF6C8 /* DeviceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSettings.swift; sourceTree = "<group>"; };
+		FB536CF8265BE92800E04111 /* FiltersModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersModalView.swift; sourceTree = "<group>"; };
 		FB6E229C2652723C00408FB8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FB6E229E2652724900408FB8 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		FB6E22A02652725500408FB8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				FB6E229C2652723C00408FB8 /* Home.swift */,
 				FBA43EB8265789C6003F4D8C /* ImageCarsouel.swift */,
 				FBA43EBA2657B0B0003F4D8C /* Filters.swift */,
+				FB536CF8265BE92800E04111 /* FiltersModalView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBDFD58B26512086005D90FA /* ContentView.swift in Sources */,
+				FB536CF9265BE92800E04111 /* FiltersModalView.swift in Sources */,
 				FBA43EBB2657B0B0003F4D8C /* Filters.swift in Sources */,
 				FB6E22A52652728800408FB8 /* Cart.swift in Sources */,
 				FBFC59F326516CDB00F3100F /* OnBoardingCard.swift in Sources */,
