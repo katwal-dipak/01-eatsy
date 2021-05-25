@@ -10,22 +10,87 @@ import SwiftUI
 struct BackgroundCleanerView: UIViewRepresentable { func makeUIView(context: Context) -> UIView { let view = UIView(); DispatchQueue.main.async { view.superview?.superview?.backgroundColor = .clear }; return view }; func updateUIView(_ uiView: UIView, context: Context) {}
 }
 
+
+struct DietaryFilter: View {
+    var body: some View {
+        VStack(alignment: .leading){
+            Text("Dietary").padding(.bottom, 10)
+            HStack{
+                Image(systemName: "leaf")
+                Text("Pure Veg")
+            }
+        }
+        .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .background(Color.yellow)
+    }
+}
+
+struct PriceFilter: View {
+    var body: some View {
+        VStack(alignment: .leading){
+            Text("Price Range").padding(.bottom, 10)
+            HStack{
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("$")
+                })
+                .frame(width: 50, height: 50, alignment: .center)
+                .background(Color.Custom.Black.tint75Percent)
+                .foregroundColor(.white)
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                .frame(maxWidth: .infinity)
+                
+                Button(action: {}, label: {
+                    Text("$$")
+                })
+                .frame(width: 50, height: 50, alignment: .center)
+                .background(Color.Custom.Black.tint75Percent)
+                .foregroundColor(.white)
+                .clipShape(Circle())
+                .frame(maxWidth: .infinity)
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("$$$")
+                })
+                .frame(width: 50, height: 50, alignment: .center)
+                .background(Color.Custom.Black.tint75Percent)
+                .foregroundColor(.white)
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                .frame(maxWidth: .infinity)
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("$$$$")
+                }).frame(width: 50, height: 50, alignment: .center)
+                .background(Color.Custom.White.tint75Percent)
+                .foregroundColor(.black)
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                .frame(maxWidth: .infinity)
+                
+            }
+        }
+        .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        
+    }
+}
+
+
 struct FiltersModalView: View {
     @Environment(\.presentationMode) var presentationMode
     var title: String = ""
     
     var body: some View {
-        VStack{
+        VStack(){
             Spacer()
                 .frame(maxWidth:.infinity)
                 .background(Color.black)
                 .opacity(0.3)
                 .background(BackgroundCleanerView())
-            VStack{
-                Text(title)
+            VStack(){
+                DietaryFilter()
+                PriceFilter()
             }
             .frame(maxWidth: .infinity, minHeight: 500)
             .background(Color.white)
+            .padding(15)
         }
         .onTapGesture {
             presentationMode.wrappedValue.dismiss()
