@@ -26,6 +26,7 @@ struct DietaryFilter: View {
 }
 
 struct PriceFilter: View {
+    
     var body: some View {
         VStack(alignment: .leading){
             Text("Price Range").padding(.bottom, 10)
@@ -73,6 +74,26 @@ struct PriceFilter: View {
 }
 
 
+struct DeliveryFeeFilter: View {
+    @State private var price: Double = 0
+    
+    var body: some View {
+        VStack(alignment: .leading){
+            Text("Max. Delivery Fee").padding(.bottom, 10)
+            
+            Text("$\(price, specifier: "%.0f")").padding(.bottom, 10)
+            
+            HStack{
+                Slider(value: $price, in: 20...100,  step: 1)
+                
+            }
+        }
+        .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .background(Color.yellow)
+    }
+}
+
+
 struct FiltersModalView: View {
     @Environment(\.presentationMode) var presentationMode
     var title: String = ""
@@ -87,6 +108,7 @@ struct FiltersModalView: View {
             VStack(){
                 DietaryFilter()
                 PriceFilter()
+                DeliveryFeeFilter()
             }
             .frame(maxWidth: .infinity, minHeight: 500)
             .background(Color.white)
