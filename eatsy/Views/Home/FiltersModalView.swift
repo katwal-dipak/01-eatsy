@@ -12,12 +12,25 @@ struct BackgroundCleanerView: UIViewRepresentable { func makeUIView(context: Con
 
 
 struct DietaryFilter: View {
+    @EnvironmentObject private var listingFilters: ListingFilters
+    
     var body: some View {
         VStack(alignment: .leading){
             Text("Dietary").padding(.bottom, 10)
-            HStack{
-                Image(systemName: "leaf")
-                Text("Pure Veg")
+            if(listingFilters.veg){
+                HStack{
+                    Image(systemName: "leaf.fill").foregroundColor(Color.green)
+                    Text("Pure Veg").foregroundColor(Color.green)
+                }.onTapGesture {
+                    listingFilters.veg = false
+                }
+            }else{
+                HStack{
+                    Image(systemName: "leaf")
+                    Text("Pure Veg")
+                }.onTapGesture {
+                    listingFilters.veg = true
+                }
             }
         }
         .frame( maxWidth: .infinity, alignment: .topLeading)
@@ -131,6 +144,6 @@ struct FiltersModalView: View {
 
 struct FiltersModalView_Previews: PreviewProvider {
     static var previews: some View {
-        FiltersModalView()
+        FiltersModalView().environmentObject(ListingFilters())
     }
 }
