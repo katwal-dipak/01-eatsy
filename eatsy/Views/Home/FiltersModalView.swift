@@ -20,8 +20,8 @@ struct DietaryFilter: View {
                 Text("Pure Veg")
             }
         }
-        .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color.yellow)
+        .frame( maxWidth: .infinity, alignment: .topLeading)
+        .padding(.bottom, 20)
     }
 }
 
@@ -68,7 +68,8 @@ struct PriceFilter: View {
                 
             }
         }
-        .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .frame( maxWidth: .infinity, alignment: .topLeading)
+        .padding(.bottom, 20)
         
     }
 }
@@ -85,11 +86,10 @@ struct DeliveryFeeFilter: View {
             
             HStack{
                 Slider(value: $price, in: 20...100,  step: 1)
-                
             }
         }
-        .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color.yellow)
+        .frame( maxWidth: .infinity, alignment: .topLeading)
+        .padding(.bottom, 20)
     }
 }
 
@@ -109,10 +109,17 @@ struct FiltersModalView: View {
                 DietaryFilter()
                 PriceFilter()
                 DeliveryFeeFilter()
+                Spacer()
+                Button(action: {
+                    
+                }, label: {
+                    SubmitButton(title: "SUBMIT")
+                }).padding(.bottom,30)
             }
+            .padding(15)
             .frame(maxWidth: .infinity, minHeight: 500)
             .background(Color.white)
-            .padding(15)
+            
         }
         .onTapGesture {
             presentationMode.wrappedValue.dismiss()
