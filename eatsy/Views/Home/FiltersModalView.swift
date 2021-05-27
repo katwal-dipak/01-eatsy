@@ -10,6 +10,42 @@ import SwiftUI
 struct BackgroundCleanerView: UIViewRepresentable { func makeUIView(context: Context) -> UIView { let view = UIView(); DispatchQueue.main.async { view.superview?.superview?.backgroundColor = .clear }; return view }; func updateUIView(_ uiView: UIView, context: Context) {}
 }
 
+struct FiltersModalView: View {
+    @Environment(\.presentationMode) var presentationMode
+    var title: String = ""
+    
+    var body: some View {
+        VStack(){
+            Spacer()
+                .frame(maxWidth:.infinity)
+                .background(Color.black)
+                .opacity(0.3)
+                .background(BackgroundCleanerView())
+            VStack(){
+                ScrollView{
+                    DietaryFilter()
+                    PriceFilter()
+                    DeliveryFeeFilter()
+                    SortFilter()
+                }
+                Button(action: {
+                    
+                }, label: {
+                    SubmitButton(title: "SUBMIT")
+                }).padding(.bottom,30)
+            }
+            .padding(15)
+            .frame(maxWidth: .infinity, minHeight: 500)
+            .background(Color.white)
+            
+        }
+        .onTapGesture {
+            presentationMode.wrappedValue.dismiss()
+        }
+        .ignoresSafeArea(.all)
+        
+    }
+}
 
 struct DietaryFilter: View {
     @EnvironmentObject private var listingFilters: ListingFilters
@@ -120,39 +156,40 @@ struct DeliveryFeeFilter: View {
     }
 }
 
-
-struct FiltersModalView: View {
-    @Environment(\.presentationMode) var presentationMode
-    var title: String = ""
+struct SortFilter: View {
+    @EnvironmentObject private var listingFilters: ListingFilters
+    
+    private var deliveryFee: Double {
+        return listingFilters.deliveryFee
+    }
     
     var body: some View {
-        VStack(){
-            Spacer()
-                .frame(maxWidth:.infinity)
-                .background(Color.black)
-                .opacity(0.3)
-                .background(BackgroundCleanerView())
-            VStack(){
-                DietaryFilter()
-                PriceFilter()
-                DeliveryFeeFilter()
-                Spacer()
-                Button(action: {
-                    
-                }, label: {
-                    SubmitButton(title: "SUBMIT")
-                }).padding(.bottom,30)
-            }
-            .padding(15)
-            .frame(maxWidth: .infinity, minHeight: 500)
-            .background(Color.white)
+        VStack(alignment: .leading){
+            Text("Sort").padding(.bottom, 10)
             
+            HStack(alignment: .center){
+                Image(systemName: "flame").resizable().frame(width: 20, height: 25)
+                Text("Picked for you (default)")
+            }.padding(.bottom, 10)
+            
+            HStack(alignment: .center){
+                Image(systemName: "flame").resizable().frame(width: 20, height: 25)
+                Text("Most Popular")
+            }.padding(.bottom, 10)
+            
+            HStack(alignment: .center){
+                Image(systemName: "star").resizable().frame(width: 25, height: 25)
+                Text("Rating")
+            }
+            .padding(.bottom, 10)
+            
+            HStack(alignment: .center){
+                Image(systemName: "clock").resizable().frame(width: 25, height: 25)
+                Text("Delivery Time")
+            }.padding(.bottom, 10)
         }
-        .onTapGesture {
-            presentationMode.wrappedValue.dismiss()
-        }
-        .ignoresSafeArea(.all)
-        
+        .frame( maxWidth: .infinity, alignment: .topLeading)
+        .padding(.bottom, 20)
     }
 }
 
