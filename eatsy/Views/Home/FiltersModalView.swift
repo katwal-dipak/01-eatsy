@@ -22,7 +22,7 @@ struct FiltersModalView: View {
                 .opacity(0.3)
                 .background(BackgroundCleanerView())
             VStack(){
-                ScrollView{
+                ScrollView(showsIndicators: false){
                     DietaryFilter()
                     PriceFilter()
                     DeliveryFeeFilter()
