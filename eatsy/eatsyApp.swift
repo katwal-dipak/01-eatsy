@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct eatsyApp: App {
     @StateObject private var deviceSettings = DeviceSettings()
+    @StateObject private var listingFilters = ListingFilters()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(deviceSettings)
+                .environmentObject(listingFilters)
         }
     }
 }

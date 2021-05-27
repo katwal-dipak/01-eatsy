@@ -8,5 +8,5 @@
 import Foundation
 
 class DeviceSettings: ObservableObject {
-    @Published var hideOnBoardingScreen = false
+    @Published var hideOnBoardingScreen = true
 }
