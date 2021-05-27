@@ -10,5 +10,5 @@ import Foundation
 class ListingFilters: ObservableObject {
     @Published var veg: Bool = false
     @Published var priceRange: [String] = []
-    @Published var deliveryFee = 0
+    @Published var deliveryFee: Double = 0
 }

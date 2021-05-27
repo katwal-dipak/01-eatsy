@@ -101,16 +101,18 @@ struct PriceFilter: View {
 
 
 struct DeliveryFeeFilter: View {
-    @State private var price: Double = 0
+    @EnvironmentObject private var listingFilters: ListingFilters
+    
+    private var deliveryFee: Double {
+        return listingFilters.deliveryFee
+    }
     
     var body: some View {
         VStack(alignment: .leading){
             Text("Max. Delivery Fee").padding(.bottom, 10)
-            
-            Text("$\(price, specifier: "%.0f")").padding(.bottom, 10)
-            
+            Text("$\(deliveryFee, specifier: "%.0f")").padding(.bottom, 10)
             HStack{
-                Slider(value: $price, in: 20...100,  step: 1)
+                Slider(value: $listingFilters.deliveryFee, in: 20...100,  step: 1)
             }
         }
         .frame( maxWidth: .infinity, alignment: .topLeading)
