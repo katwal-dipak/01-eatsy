@@ -8,41 +8,29 @@
 import Foundation
 import SwiftUI
 
-struct H1BoldStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(Font.custom("Lato-Bold", size: 16))
-            .foregroundColor(Color.Custom.Black.tint75Percent)
-    }
-}
-
-struct H1RegularStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(Font.custom("Lato-Regular", size: 16))
-            .foregroundColor(Color.Custom.Black.tint75Percent)
-    }
-}
-
-struct H2BoldStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(Font.custom("Lato-Bold", size: 14))
-            .foregroundColor(Color.Custom.Black.tint50Percent)
-    }
-}
-
-struct H2RegularStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(Font.custom("Lato-Regular", size: 14))
-            .foregroundColor(Color.Custom.Black.tint50Percent)
-    }
-}
-
 
 extension Text {
-    func textStyle<Style: ViewModifier>(_ style: Style) -> some View {
-        ModifiedContent(content: self, modifier: style)
+    
+    func H1BoldTextStyle() -> some View {
+        self.font(Font.custom("Lato-Bold", size: 16))
+            .foregroundColor(Color.Custom.Black.tint75Percent)
+    }
+    
+    
+    func H1RegularTextStyle() -> some View {
+        self.font(Font.custom("Lato-Regular", size: 16))
+            .foregroundColor(Color.Custom.Black.tint75Percent)
+    }
+    
+    
+    func H2BoldTextStyle() -> some View {
+        self.font(Font.custom("Lato-Bold", size: 14))
+            .foregroundColor(Color.Custom.Black.tint50Percent)
+    }
+    
+    
+    func H2RegularTextStyle() -> some View {
+        self.font(Font.custom("Lato-Bold", size: 14))
+            .foregroundColor(Color.Custom.Black.tint50Percent)
     }
 }
