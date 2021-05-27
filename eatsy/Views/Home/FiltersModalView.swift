@@ -52,7 +52,7 @@ struct DietaryFilter: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("Dietary").padding(.bottom, 10)
+            Text("Dietary").padding(.bottom, 10).font(Font.custom("Lato-Bold", size: 18))
             if(listingFilters.veg){
                 HStack{
                     Image(systemName: "leaf.fill").foregroundColor(Color.green)
