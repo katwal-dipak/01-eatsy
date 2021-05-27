@@ -19,6 +19,7 @@
 		FB880203265F3C1C00CDBDE4 /* PriceRangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB880202265F3C1C00CDBDE4 /* PriceRangeButton.swift */; };
 		FB880206265F68C900CDBDE4 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB880205265F68C900CDBDE4 /* Lato-Regular.ttf */; };
 		FB880208265F69B000CDBDE4 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB880207265F69B000CDBDE4 /* Lato-Bold.ttf */; };
+		FB88020A265F6E8000CDBDE4 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB880209265F6E8000CDBDE4 /* TextExtension.swift */; };
 		FBA43EA526575CC2003F4D8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA43EA426575CC2003F4D8C /* Constants.swift */; };
 		FBA43EA82657604D003F4D8C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA43EA72657604D003F4D8C /* ColorExtension.swift */; };
 		FBA43EB226578685003F4D8C /* FeaturedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA43EB126578685003F4D8C /* FeaturedItemView.swift */; };
@@ -48,6 +49,7 @@
 		FB880202265F3C1C00CDBDE4 /* PriceRangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRangeButton.swift; sourceTree = "<group>"; };
 		FB880205265F68C900CDBDE4 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		FB880207265F69B000CDBDE4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		FB880209265F6E8000CDBDE4 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		FBA43EA426575CC2003F4D8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FBA43EA72657604D003F4D8C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FBA43EB126578685003F4D8C /* FeaturedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA43EA72657604D003F4D8C /* ColorExtension.swift */,
+				FB880209265F6E8000CDBDE4 /* TextExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				FB6E229D2652723C00408FB8 /* Home.swift in Sources */,
 				FB6E229F2652724900408FB8 /* Search.swift in Sources */,
 				FB2501372656463A006DF6C8 /* DeviceSettings.swift in Sources */,
+				FB88020A265F6E8000CDBDE4 /* TextExtension.swift in Sources */,
 				FB6E22A12652725500408FB8 /* Settings.swift in Sources */,
 				FBA43EA526575CC2003F4D8C /* Constants.swift in Sources */,
 				FBFC59F6265172A300F3100F /* OnBoarding.swift in Sources */,

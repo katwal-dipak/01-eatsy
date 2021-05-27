@@ -52,7 +52,10 @@ struct DietaryFilter: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("Dietary").padding(.bottom, 10).font(Font.custom("Lato-Bold", size: 18))
+            Text("Dietary")
+                .textStyle(H1BoldStyle())
+                .padding(.bottom, 10)
+            
             if(listingFilters.veg){
                 HStack{
                     Image(systemName: "leaf.fill").foregroundColor(Color.green)
@@ -64,6 +67,7 @@ struct DietaryFilter: View {
                 HStack{
                     Image(systemName: "leaf")
                     Text("Pure Veg")
+                        .textStyle(H1RegularStyle())
                 }.onTapGesture {
                     listingFilters.veg = true
                 }
@@ -98,7 +102,10 @@ struct PriceFilter: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("Price Range").padding(.bottom, 10)
+            Text("Price Range")
+                .textStyle(H1BoldStyle())
+                .padding(.bottom, 10)
+            
             HStack{
                 Button(action: {
                     onPress(price: "$")
@@ -145,7 +152,9 @@ struct DeliveryFeeFilter: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("Max. Delivery Fee").padding(.bottom, 10)
+            Text("Max. Delivery Fee")
+                .textStyle(H1BoldStyle())
+                .padding(.bottom, 10)
             Text("$\(deliveryFee, specifier: "%.0f")").padding(.bottom, 10)
             HStack{
                 Slider(value: $listingFilters.deliveryFee, in: 20...100,  step: 1)
@@ -165,7 +174,9 @@ struct SortFilter: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("Sort").padding(.bottom, 10)
+            Text("Sort")
+                .textStyle(H1BoldStyle())
+                .padding(.bottom, 10)
             
             HStack(alignment: .center){
                 Image(systemName: "flame").resizable().frame(width: 20, height: 25)
