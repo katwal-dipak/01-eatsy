@@ -14,6 +14,7 @@ struct PriceRangeButton: View {
     
     var body: some View {
         Text("\(price)")
+            .font(Font.custom("Lato-Regular", size: 16))
             .frame(width: 60, height: 60, alignment: .center)
             .background(isSelected ?  Color.Custom.Black.tint75Percent : Color.Custom.Concrete.tint25Percent)
             .foregroundColor(isSelected ?  .white : Color.Custom.Black.tint75Percent)
