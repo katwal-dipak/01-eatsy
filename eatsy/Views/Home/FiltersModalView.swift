@@ -39,45 +39,57 @@ struct DietaryFilter: View {
 }
 
 struct PriceFilter: View {
+    @EnvironmentObject private var listingFilters: ListingFilters
+    
+    func isSelected(price: String) -> Bool {
+        if(listingFilters.priceRange.contains("\(price)")){
+            return true
+        }
+        
+        return false
+    }
+    
+    func onPress(price: String) -> Void {
+        if(isSelected(price: price)){
+            listingFilters.priceRange.removeAll { value in
+                return value == price
+            }
+        }else{
+            listingFilters.priceRange.append(price)
+        }
+    }
+    
     
     var body: some View {
         VStack(alignment: .leading){
             Text("Price Range").padding(.bottom, 10)
             HStack{
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Text("$")
+                Button(action: {
+                    onPress(price: "$")
+                    
+                }, label: {
+                    PriceRangeButton(isSelected: isSelected(price: "$"), price: "$")
                 })
-                .frame(width: 50, height: 50, alignment: .center)
-                .background(Color.Custom.Black.tint75Percent)
-                .foregroundColor(.white)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .frame(maxWidth: .infinity)
                 
-                Button(action: {}, label: {
-                    Text("$$")
+                Button(action: {
+                    onPress(price: "$$")
+                }, label: {
+                    PriceRangeButton(isSelected: isSelected(price: "$$"), price: "$$")
                 })
-                .frame(width: 50, height: 50, alignment: .center)
-                .background(Color.Custom.Black.tint75Percent)
-                .foregroundColor(.white)
-                .clipShape(Circle())
-                .frame(maxWidth: .infinity)
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Text("$$$")
+                
+                Button(action: {
+                    onPress(price: "$$$")
+                }, label: {
+                    PriceRangeButton(isSelected: isSelected(price: "$$$"), price: "$$$$")
                 })
-                .frame(width: 50, height: 50, alignment: .center)
-                .background(Color.Custom.Black.tint75Percent)
-                .foregroundColor(.white)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .frame(maxWidth: .infinity)
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Text("$$$$")
-                }).frame(width: 50, height: 50, alignment: .center)
-                .background(Color.Custom.White.tint75Percent)
-                .foregroundColor(.black)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .frame(maxWidth: .infinity)
+                
+                Button(action: {
+                    onPress(price: "$$$$")
+                }, label: {
+                    PriceRangeButton(isSelected: isSelected(price: "$$$$"), price: "$$$$")
+                })
                 
             }
         }

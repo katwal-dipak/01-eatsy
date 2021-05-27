@@ -8,7 +8,7 @@
 import Foundation
 
 class ListingFilters: ObservableObject {
-    @Published var veg = false
-    @Published var priceRange = []
+    @Published var veg: Bool = false
+    @Published var priceRange: [String] = []
     @Published var deliveryFee = 0
 }
