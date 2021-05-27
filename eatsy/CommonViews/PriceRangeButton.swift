@@ -14,7 +14,7 @@ struct PriceRangeButton: View {
     
     var body: some View {
         Text("\(price)")
-            .frame(width: 50, height: 50, alignment: .center)
+            .frame(width: 60, height: 60, alignment: .center)
             .background(isSelected ?  Color.Custom.Black.tint75Percent : Color.Custom.Concrete.tint25Percent)
             .foregroundColor(isSelected ?  .white : Color.Custom.Black.tint75Percent)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
